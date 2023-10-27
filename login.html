@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login with Firebase</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper" id="wrapper">
+        <div class="form-wrapper sign-in">
+            <form action="">
+                <h2>Sign In</h2>
+                <div class="input-group">
+                    <input type="email" name="" id="email_signIn" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="" id="password_signIn" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="remember">
+                    <label for=""><input type="checkbox" name="" id="ds"> Remember me</label>
+                </div>
+                <button type="submit" id="btnSignIn">Sign In</button>
+                <div class="signUp-link">
+                    <p>Don't have an account? <a href="#" class="signUpBtn-link" id="signUpBtn-link">Sign Up</a></p>
+                </div>
+                <div class="social-platform">
+                    <p>Or sign in with</p>
+                    <div class="social-icons">     
+                        <a href="#" id="signInWithFacebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="" id="signInWithGoogle"><i class="fa-brands fa-google"></i></a>
+                        <a href="#" id="signInWithGitHub"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="form-wrapper sign-up">
+            <form action="">
+                <h2>Sign Up</h2>
+                <div class="input-group">
+                    <input type="text" name="" id="username_signUp" required>
+                    <label for="">Username</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" name="" id="email_signUp" required>
+                    <label for="">Email</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="" id="password_signUp" required>
+                    <label for="">Password</label>
+                </div>
+                <div class="remember">
+                    <label for=""><input type="checkbox" name="" id="as"> I agree to the terms & conditions</label>
+                </div>
+                <button type="submit" id="btnSignUp">Sign Up</button>
+                <div class="signUp-link">
+                    <p>Already have an account? <a href="#" class="signInBtn-link" id="signInBtn-link">Sign In</a></p>
+                </div>
+                <!-- <div class="social-platform">
+                    <p>Or sign up with</p>
+                    <div class="social-icons">     
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#"><i class="fa-brands fa-google"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div> -->
+            </form>
+        </div>
+
+    </div>
+
+    <div class="inPage" id="inPage">
+        <h1>WELCOME!</h1>
+        <button id="signOutBtn">Sign Out</button>
+    </div>
+
+    <!-- Scripts js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    
+    <script src="script.js"></script>
+    <script src="login.js"></script>
+</body>
+
+
+
+</html>
