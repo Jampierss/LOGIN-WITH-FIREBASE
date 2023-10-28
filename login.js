@@ -17,6 +17,9 @@ const btnSignIn = document.getElementById("btnSignIn");
 const signOutBtn = document.getElementById("signOutBtn");
 inPage.style.display = 'none';
 
+const provider = new firebase.auth.GoogleAuthProvider();
+const signInWithGoogleBtn = document.getElementById('signInWithGoogle');
+
 const signUp = async() => {
     const email = document.getElementById("email_signUp").value;
     const password = document.getElementById("password_signUp").value;
@@ -70,9 +73,22 @@ const signOut = async() => {
     });
 };
 
+const signInWithGoogle = async() => {
+    firebase.auth().signInWithPopup(provider)
+    .then((response) => {
+        console.log(response.user)
+    })
+    .catch((err) => {
+        console.log(err.message)
+    })
+};
+
 checkAuthState();
 
 btnSignUp.addEventListener('click', signUp);
 btnSignIn.addEventListener('click', signIn);
 signOutBtn.addEventListener('click', signOut)
-
+signInWithGoogleBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    signInWithGoogle();
+});
